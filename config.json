@@ -1,0 +1,42 @@
+{
+  "dc": {
+    "distribute": "rafacas/oel63-plain",
+    "chef": "12.0.3",
+    "ip": "192.168.44.44",
+    "memory": "2048",
+    "synced_folders": [
+      {
+        "host_path": "www/",
+        "guest_path": "/var/www",
+        "type": "default"
+      }
+    ],
+    "forwarded_ports": []
+  },
+  "dchosts": {
+    "sites": {
+      "trpdc.dev": {
+        "account_name": "root",
+        "account_pass": "root",
+        "account_mail": "box@thomsonreuters.com",
+        "site_name": "Thomson Reuters Project Development Community",
+        "site_mail": "box@thomsonreuters.com",
+        "vhost": {
+          "document_root": "developers-dev.int.thomsonreuters.com",
+          "url": "developers-dev.int.thomsonreuters.com",
+          "alias": ["developers-dev.int.thomsonreuters.com"]
+        }
+      }
+    },
+    "solr":{
+      "version": "4.8.1",
+      "url": "https://archive.apache.org/dist/lucene/solr/4.8.1/solr-4.8.1.tgz",
+      "data_dir": "/srv/solr",
+      "dir": "/srv/solr",
+      "port": "8983",
+      "pid_file": "/var/run/solr.pid",
+      "log_file": "/var/log/solr.log",
+      "install_java": true
+    }
+  }
+}
